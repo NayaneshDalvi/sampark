@@ -1,0 +1,44 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Event Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;" >
+<!--  <ion-card>
+<ion-card-content style="border-left: 3px solid #ace5bc;font-size: 15px;">
+   0000495 : SHREE KAALIKAI
+  </ion-card-content>
+
+</ion-card> -->
+<ion-card>
+
+  <ion-item style="margin: 5px 0px 5px 0px;border-bottom: 1px dotted #dedede;">
+    <ion-avatar item-left>
+      <img src="images/icons/school-bell.png">
+    </ion-avatar>
+    <h2 style="white-space: normal;font-size: 15px;font-weight: 400;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;">{{event.newsSubject}}</h2>
+  </ion-item>
+
+ <!--  <img src="images/backimg1.jpg"> -->
+
+  <ion-card-content>
+    <p>{{event.newsDesc}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="ios-calendar" style="color: #5cddd3;"></ion-icon>
+          <p style="color: #b9aeae;margin-top:4px;">{{event.createdDate}}</p>
+		</button>
+    </ion-col>
+    
+  
+  </ion-row>
+
+</ion-card>
+ </ion-content>
+

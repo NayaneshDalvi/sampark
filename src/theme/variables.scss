@@ -1,0 +1,178 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+
+
+
+
+.p-0{
+    padding:0px !important;
+}
+.m-t-0{
+    margin-top:0px !important;
+}
+.white-fg{
+    color: #000;
+}
+
+.commonBtn{
+    background: none !important;
+    color: #000;
+    border: 1px solid #000;
+}
+.m-t-50{
+     margin-top:50px !important;
+}
+.error-box{
+    text-align: left;
+    color: #fe0000;
+    font-size: 16px;
+    font-weight: bolder;
+}
+ion-page scroll-content{
+  padding:0px !important;
+}
+
+
+
+.leftPannelDrawer{
+   .mainBlock{
+   background: rgb(249, 249, 249); height: 100%;width: 100%;position: absolute;
+   .firstBlockImg{
+   padding: 5px 0px 11px 21px;
+   }
+   .m-t-50{
+   margin-top: 50px;
+   }
+   .profilePic{
+   border-radius: 50%;height: 78px; width: 77px;border: 3px solid #fff;
+   }
+   .userName{
+   font-size: 20px;
+    color: #fff;
+    margin-top: 17px;
+    font-weight: 600;
+   }
+   ion-item:hover{
+   background-color:#e8e8e8 !important;
+   }
+   .emailid{
+   font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 3px 0px 15px 0px;
+    font-weight: 500;
+   }
+   .border-bottom{
+   border-bottom: 1px dotted #afabab;
+   }
+   .listBox{
+   height: 60px;
+    cursor: pointer;
+   }
+   .m-r-0{
+   margin-right: 0px;
+   }
+   .menuIcn{
+   color: #727272;
+    margin: 8px 8px 13px 0;
+    font-size: 24px;
+   }
+   .menuContent{
+    color: #5d5d5d;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: capitalize;
+   }
+   .logoutBtnBox{
+   margin: 0px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+   }
+   .logoutContainer{
+   height: 60px;
+    border-top: 1px dotted #afabab;
+   }
+   .red{
+   color: red;
+   }
+   } 
+
+}

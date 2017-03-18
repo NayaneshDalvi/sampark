@@ -1,0 +1,53 @@
+<!-- <ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+ -->
+ <ion-menu *ngIf="isuserName" [content]="content" side="left" class="sidebar">
+ <ion-content class="m-t-0 leftPannelDrawer">
+ <div class="mainBlock">
+    <div class="sidebar-top" class="firstBlockImg" style="background: url(images/background/img3_gray.png);background-size: 100% 100%;height: 175px;">
+    <div class="m-t-50">
+<!--<img class="avatar profilePic" src="img/profilepic.png"style="">-->
+<div class="userName">{{userName}}</div>
+<div class="emailid">{{user.designationName}}</div>
+<div class="emailid">UserCode: {{user.ffCode}}</div>
+    </div>
+  </div>
+    <ion-list class="border-bottom">
+      <ion-item  menuClose *ngFor="let p of pages" (click)="openPage(p)" class="listBox">
+        <ion-avatar item-left class="m-r-0">
+          <ion-icon class="menuIcn" name="{{p.icon}}"></ion-icon>
+        </ion-avatar>
+        <h2 *ngIf="p" class="author-name menuContent">{{p.title}}</h2>
+      </ion-item>
+    </ion-list>  
+
+
+  
+  <ion-list item-bottom class="logoutBtnBox">
+  <ion-item menuToggle (click)="doClick()" class="logoutContainer">
+        <ion-avatar item-left class="m-r-0">
+          <ion-icon class="menuIcn red" name="power"></ion-icon>
+        </ion-avatar>
+        <h2 class="author-name menuContent">Logout</h2>
+        <p class="time" ></p>
+      </ion-item>
+ </ion-list>
+ </div>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,78 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;">
+ <ion-grid>
+  <ion-row style="margin-top: 15px;">
+    <ion-col width-33 (click)="gotoPage(0)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/coins.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;"> Collection <br> Status</div>
+	</div>
+	</ion-col>
+	  <ion-col width-33 (click)="gotoPage(1)" >
+	<div>
+	<div style="text-align: center;"><img src="images/icons/reunion.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Group <br> Details</div>
+	</div>
+	</ion-col>
+	 <ion-col width-33 (click)="gotoPage(2)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/check (1).png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Voucher Information</div>
+	</div>
+	</ion-col>
+	</ion-row>
+	<ion-row style="margin-top: 15px;padding-bottom: 6px;">
+    <ion-col width-33 (click)="gotoPage(3)" >
+	<div>
+	<div style="text-align: center;"><img src="images/icons/team (1).png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Group <br>Contact</div>
+	</div>
+	</ion-col>
+	  <ion-col width-33 (click)="gotoPage(4)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/invoice.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">eCoupon<br> Balances</div>
+	</div>
+	</ion-col>
+	 <ion-col width-33 (click)="gotoPage(5)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/office-block.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Sampark Branches</div>
+	</div>
+	</ion-col>
+	</ion-row>
+	<ion-row style="margin-top: 15px;padding-bottom: 6px;">
+    <ion-col width-33 (click)="gotoPage(6)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/notepad.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Project Contribution</div>
+	</div>
+	</ion-col>
+	  <ion-col width-33 (click)="gotoPage(7)">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/calendar (2).png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">News and<br> Events</div>
+	</div>
+	</ion-col>
+	 <ion-col width-33  (click)="logout()">
+	<div>
+	<div style="text-align: center;"><img src="images/icons/logout.png" style="height: 70px;margin: auto;cursor: pointer;"></div>
+	<div style="text-align: center;font-size: 13px;color: #fff;font-weight: 400;margin: 4px 0px 4px 0px;cursor: pointer;">Logout</div>
+	</div>
+	</ion-col>
+	</ion-row>
+	
+	
+	
+	
+</ion-grid>
+
+</ion-content>

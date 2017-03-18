@@ -1,0 +1,52 @@
+<ion-content id="addStepWrapper" class="login-content" style="background-image: url(images/background/back_5.png);
+    background-size: cover;
+    background-repeat: no-repeat;">
+  <ion-row style="margin: 40px 0px 10px 0px;">
+    <ion-col width-50 style="margin: auto;">
+      <img src="images/background/logo-1.png"/>
+    </ion-col>
+   </ion-row>
+  <div class="login-box">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <!-- <ion-list inset>
+            
+            <ion-item>
+              <input  type="text" placeholder="Promoter Code" name="promoterCode" [(ngModel)]="registerCredentials.promoterCode" required/>
+            </ion-item>
+            
+            <ion-item>
+              <input  type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required/>
+            </ion-item>
+            
+          </ion-list> -->
+		  <ion-list>
+
+  <ion-item style="background: transparent;border: 0px;">
+    <ion-label floating style="font-size:large;">Username</ion-label>
+   <ion-input type="text" style="font-size:x-large;color:#fff;" name="promoterCode" [(ngModel)]="registerCredentials.ffCode" required></ion-input>
+  </ion-item>
+
+  <ion-item style="background: transparent;border: 0px;">
+    <ion-label floating style="font-size:large;">Password</ion-label>
+   <ion-input type="password" style="font-size:x-large;color:#fff;" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+  </ion-item>
+
+</ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col >
+          <!--<button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>-->
+		   <button ion-button block outline style="color: #fff;border: 1px solid #fff;" type="submit" [disabled]="!registerForm.form.valid">Login</button>
+          <!-- <button ion-button class="register-btn" block clear (click)="createAccount()">Forgot Password -->
+          <!-- </button> -->
+        </ion-col>
+      </ion-row>
+	  
+      
+    </form>
+  </div>
+</ion-content>

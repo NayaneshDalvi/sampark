@@ -1,0 +1,24 @@
+page-branch {
+
+}
+.inline {
+  display: inline-block;
+  margin: 1em;
+}
+.wrap {
+  display: table;
+  height:  100px;
+  width:   160px;
+  padding: 10px;
+  border:  thin solid darkgray;
+}
+.wrap p {
+  display:        table-cell;
+  vertical-align: middle;
+}
+
+.cardAddress{
+    border-bottom: 1px dotted #aca9a9;padding-bottom: 10px;color: #b0a8a8;
+    font-size: 14px;
+    font-weight: 500;
+    }

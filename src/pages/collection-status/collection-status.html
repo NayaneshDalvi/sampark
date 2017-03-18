@@ -1,0 +1,101 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Collection Status</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;">
+<!--  <ion-card>
+<ion-card-content style="border-left: 3px solid #ace5bc;font-size: 15px;">
+   0000495 : SHREE KAALIKAI
+  </ion-card-content>
+
+ </ion-card>-->
+<ion-card>
+<ion-item style="border-bottom: 1px dotted #dedede;margin-bottom: 3px;">
+    <ion-avatar item-left>
+      <img src="images/icons/coins.png">
+    </ion-avatar>
+    <h2 style="font-weight: 500;font-size: 16px;">Collection Status</h2>
+   
+  </ion-item>
+<ion-card-content>
+<ion-grid style="">
+<ion-row>
+<ion-col width-100>
+<ion-list>
+  <ion-item style="padding-left: 0px;border-bottom: 1px solid #eee;font-size: 14px;border-top:0px;">
+    <ion-label>Financial Year</ion-label>
+    <ion-select [(ngModel)]="financialYear">
+         <ion-option *ngFor="let years of yearList;">{{years}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col width-80>
+</ion-col>
+<ion-col width-20>
+<button ion-fab style="height: 40px;width: 40px;background-color: #fba61c;" (click)="getCollectionStatus()">Go</button>
+</ion-col>
+</ion-row>
+</ion-grid>
+<ion-grid>
+<ion-row>
+    <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Promo Target:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.promotionTarget|indianNumber}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-50 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Promo Collection:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.promotionCollection|indianNumber}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+     Req Collection:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.promotionBalance|indianNumber}}
+    </ion-col>
+</ion-row>
+</ion-grid>
+<ion-grid>
+<ion-row>
+    <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+    C.M.D. Target:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.cmdTarget|indianNumber}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+    C.M.D. Collection:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.cmdCollection|indianNumber}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+     Req Collection:
+    </ion-col>
+	 <ion-col width-60 style="font-size: 14px;color: #494040;font-weight: 400;">
+&#8377;	{{collection.cmdBalance|indianNumber}}
+    </ion-col>
+</ion-row>
+</ion-grid>
+</ion-card-content>
+
+  
+</ion-card>
+ </ion-content>

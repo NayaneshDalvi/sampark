@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Group Contact Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;">
+  <ion-card>
+    <ion-item style="border-bottom: 1px dotted #dedede;margin-bottom: 3px;">
+      <ion-avatar item-left>
+        <img src="images/icons/team (1).png">
+      </ion-avatar>
+      <h2 style="font-weight: 500;font-size: 16px;">Group Contact Details</h2>
+
+    </ion-item>
+    <ion-card-content>
+      <ion-row>
+        <ion-col width-100>
+          <ion-list>
+            <ion-item style="padding-left: 0px;border-bottom: 1px solid #eee;font-size:14px;border-top: 0px;">
+              <ion-label>Promoter Code</ion-label>
+              <ion-input type="text" name="promoterNo" [(ngModel)]="promoterNo"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-80></ion-col>
+        <ion-col width-20>
+          <button ion-fab style="height: 40px;width: 40px;background-color: #fba61c;" (click)="getContactDetails()">Go</button>
+        </ion-col>
+      </ion-row>
+      <ion-grid style="border: 1px dotted #d0c7c7;padding: 5px 8px 5px 8px;" *ngIf="promoter">
+        <ion-row>
+          <ion-item style="padding-left:0px;">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Name:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.fullName}}</p>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="padding-left:0px;">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Address:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.address1}}</p>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.address2}}</p>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.address3}}</p>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.city}}</p>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.stateName}}&nbsp;{{promoter.pinCode}}</p>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="padding-left:0px;" *ngIf="promoter.mobileNo">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Mobile No:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.mobileNo}}</p>
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="padding-left:0px;" *ngIf="promoter.email">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">E-Mail ID:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{promoter.email}}</p>
+          </ion-item>
+        </ion-row>
+
+      </ion-grid>
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

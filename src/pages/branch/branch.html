@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sampark Branches</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;">
+  <ion-card>
+    <!-- <ion-card-content style="border-left: 3px solid #ace5bc;font-size: 15px;">
+   0000495 : SHREE KAALIKAI
+  </ion-card-content>
+ -->
+  </ion-card>
+  <ion-card>
+    <ion-item style="border-bottom: 1px dotted #dedede;margin-bottom: 3px;">
+      <ion-avatar item-left>
+        <img src="images/icons/office-block.png">
+      </ion-avatar>
+      <h2 style="font-weight: 500;font-size: 16px;">Sampark Branches</h2>
+
+    </ion-item>
+    <ion-card-content>
+      <ion-row style="">
+        <ion-col width-100>
+          <ion-list>
+            <ion-item style="padding-left: 0px;border-bottom: 1px solid #eee;font-size: 14px;border-top: 0px;">
+              <ion-label>Branches</ion-label>
+              <ion-select [(ngModel)]="branchCode">
+                <ion-option *ngFor="let branch of branches; let i = index;" value="{{branch.branchId}}">{{branch.branchName}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-80></ion-col>
+        <ion-col width-20>
+          <button ion-fab style="height: 40px;width: 40px;background-color: #fba61c;" (click)="getBranchDetails()">Go</button>
+        </ion-col>
+      </ion-row>
+      <ion-grid style="border: 1px dotted #d0c7c7;padding: 5px 8px 5px 8px;">
+        <ion-row>
+          <ion-item *ngIf="currentBranch.address1" style="padding-left:0px;">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Address:</h2>
+            <p *ngIf="currentBranch.address1" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.address1}}</p>
+            <p *ngIf="currentBranch.address2" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.address2}}</p>
+            <p *ngIf="currentBranch.address3" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.address3}}</p>
+            <p *ngIf="currentBranch.city" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.city}}</p>
+            <p *ngIf="currentBranch.stateName" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.stateName}}</p>
+            <p *ngIf="currentBranch.pin" style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.pin}}</p>
+
+          </ion-item>
+        </ion-row>
+        <ion-row>
+          <ion-item style="padding-left:0px;" *ngIf="currentBranch.phone">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Phone No:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.phone}}</p>
+          </ion-item>
+        </ion-row>
+        <ion-row *ngIf="currentBranch.contactPerson">
+          <ion-item style="padding-left:0px;">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Contact Person:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.contactPerson}}</p>
+          </ion-item>
+        </ion-row>
+        <ion-row *ngIf="currentBranch.mobile">
+          <ion-item style="padding-left:0px;">
+            <h2 style="margin-bottom:4px;font-weight: 500;font-size: 15px;">Mobile No:</h2>
+            <p style="font-size: 13px;color: #3e3939;font-weight: 400;white-space: normal;line-height: 1.5;">{{currentBranch.mobile}}</p>
+          </ion-item>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,57 @@
+page-aboutus {
+.contact {
+
+.contactCard{
+    .cardHdr{
+    font-size: 19px;
+    }
+    .cardAddress{
+    border-bottom: 1px dotted #aca9a9;padding-bottom: 10px;color: #b0a8a8;
+    font-size: 14px;
+    font-weight: 500;
+    }
+    .cardRowPadng{
+    padding: 10px 0px 0px 0px;
+    }
+    .cardLastRowPad{
+    padding: 10px 0px 10px 0px;
+    }
+    
+   .contact{
+    border: 2px solid #2f6fb4;
+     color: #2f6fb4;
+     font-size: 18px;
+    margin: 0px;
+    padding: 3px 7px 3px 8px;
+    border-radius: 8px;
+    }
+    .fax{
+    border: 2px solid #FF9800;
+    color: #FF9800;
+    font-size: 18px;
+    margin: 0px;
+    padding: 3px 7px 3px 8px;
+    border-radius: 8px;
+    }
+    .email{
+    border: 2px solid #E91E63;
+    color: #E91E63;
+    font-size: 18px;
+    margin: 0px;
+    padding: 3px 7px 3px 8px;
+    border-radius: 8px;
+    }
+    
+    .CardContent{
+    text-align: left;font-size: 14px;color: #615b5b;padding-top: 9px;font-weight: 500;
+    }
+    .m-b-10{
+     margin-bottom: 10px;
+    }
+    .cgray{
+    color: #a49e9e;
+    }
+}
+}
+
+}

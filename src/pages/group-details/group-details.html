@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Group Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;">
+  <!-- <ion-card>
+<ion-card-content style="border-left: 3px solid #ace5bc;font-size: 15px;">
+   0000495 : SHREE KAALIKAI
+  </ion-card-content>
+
+</ion-card> -->
+  <ion-card>
+    <ion-item style="border-bottom: 1px dotted #dedede;margin-bottom: 3px;">
+      <ion-avatar item-left>
+        <img src="images/icons/reunion.png">
+      </ion-avatar>
+      <h2 style="font-weight: 500;font-size: 16px;">Group Details</h2>
+
+    </ion-item>
+    <ion-card-content>
+      <ion-row *ngFor="let groupDetail of groupDetailList; let i = index;" style="border-bottom: 1px solid #eee;">
+        <ion-grid>
+          <ion-row style="font-size: 14px;color: #494040;font-weight: 400;text-transform: uppercase;">
+            Designation : {{groupDetail.rankId}} -{{groupDetail.designationName}}
+          </ion-row>
+          <ion-row>
+            Member Count : {{groupDetail.memberCount}}
+          </ion-row>
+        </ion-grid>
+      </ion-row>
+      <ion-row style="border-top: 1px solid #eee;">
+        <ion-col width-50 style="font-size: 14px;color: #494040;font-weight: bold;">
+          Total Member &nbsp;&nbsp;&nbsp; :
+        </ion-col>
+        <ion-col width-50 style="font-size: 14px;color: #494040;font-weight: bold;">
+          {{getMemberCount()|indianNumber}}
+        </ion-col>
+      </ion-row>
+
+      <!-- <ion-grid>
+<ion-row>
+    <ion-col width-33 style="font-size: 14px;color: #494040;font-weight: 400;max-width: 36%;">
+    Designation:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 14px;color: #494040;font-weight: 400;">
+	13-Senior Regional Executive
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	Avinash P. Dange
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	SHREE KAALIKI
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	SHREE KAALIKI
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	SHREE KAALIKI
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	SHREE KAALIKI
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-33 style="font-size: 12px;color:#a9a3a3;font-weight: 400;">
+    0000495:
+    </ion-col>
+	 <ion-col width-67 style="font-size: 11px;color:#a9a3a3;font-weight: 400;">
+	SHREE KAALIKI
+    </ion-col>
+</ion-row>
+</ion-grid>
+ -->
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

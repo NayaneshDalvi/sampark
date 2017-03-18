@@ -1,0 +1,108 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Project Contribution</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(images/background/img2_gray.png);background-size: cover;background-repeat: no-repeat;" >
+<!--  <ion-card>
+<ion-card-content style="border-left: 3px solid #ace5bc;font-size: 15px;">
+   0000495 : SHREE KAALIKAI
+  </ion-card-content>
+
+</ion-card> -->
+<ion-card>
+<ion-item style="border-bottom: 1px dotted #dedede;margin-bottom: 3px;">
+    <ion-avatar item-left>
+      <img src="images/icons/notepad.png">
+    </ion-avatar>
+    <h2 style="font-weight: 500;font-size: 16px;">Project Contribution</h2>
+   
+  </ion-item>
+<ion-card-content>
+<ion-row>
+ <ion-col width-100>
+<ion-list>
+  <ion-item style="padding-left: 0px;border-bottom: 1px solid #eee;font-size:14px;border-top: 0px;">
+    <ion-label>Certificate No</ion-label>
+    <ion-input type="text" name="certificateNo" [(ngModel)]="certificateNo"></ion-input>
+  </ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col width-80></ion-col>
+ <ion-col width-20>
+<button ion-fab style="height: 40px;width: 40px;background-color: #fba61c;"(click)="getProjectContribution()">Go</button>
+</ion-col>
+</ion-row>
+<ion-grid style="border: 1px dotted #d0c7c7;padding: 5px 8px 5px 8px;"  *ngIf="project">
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Name:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+   {{project.fullName}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Project:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+   {{project.planName}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Reg. Date:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+   {{getDate(project.regDate)}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+   EMI Amount:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+  &#8377; {{project.emiAmount|indianNumber}}
+    </ion-col>
+  
+</ion-row>
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    EMI Paid:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+   {{getEmiPaid(project)}}
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Maturity Date:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+  {{getDate(project.maturityDate)}}
+    </ion-col>
+  
+</ion-row>
+
+<ion-row>
+    <ion-col width-30 style="font-size: 14px;color: #494040;font-weight: 400;">
+    Due Date:
+    </ion-col>
+   <ion-col width-70 style="font-size: 14px;color: #494040;font-weight: 400;">
+  {{getDate(project.nextEmiDueDate)}}
+    </ion-col>
+  
+</ion-row>
+
+</ion-grid>
+</ion-card-content>
+
+  
+</ion-card>
+ </ion-content>
+
